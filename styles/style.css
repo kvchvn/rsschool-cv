@@ -274,48 +274,6 @@ a:hover {
   margin-right: 5px;
 }
 
-/* travels div */
-
-.country_item {
-  padding-left: 0;
-  display: flex;
-  line-height: 24px;
-}
-
-.country_item:nth-of-type(2n + 1) {
-  background-color: rgba(128, 128, 128, 0.1);
-}
-
-.flag_icon {
-  margin-right: 20px;
-  width: 24px;
-  height: 24px;
-}
-
-.russia_icon {
-  background-image: url("../assets/icons/russia.png");
-}
-
-.slovakia_icon {
-  background-image: url("../assets/icons/slovakia.png");
-}
-
-.austria_icon {
-  background-image: url("../assets/icons/austria.png");
-}
-
-.hungary_icon {
-  background-image: url("../assets/icons/hungary.png");
-}
-
-.lithuania_icon {
-  background-image: url("../assets/icons/lithuania.png");
-}
-
-.poland_icon {
-  background-image: url("../assets/icons/poland.png");
-}
-
 /* languages div */
 
 .languages .item {
@@ -390,7 +348,6 @@ a:hover {
   margin-bottom: 10px;
   width: 100%;
   height: 200px;
-  background-image: url("../assets/image/project-screen.jpg");
   background-size: cover;
   box-shadow: 0 0 12px 12px white inset;
   filter: blur(6px);
@@ -400,6 +357,14 @@ a:hover {
 .projects_link:hover {
   filter: blur(0);
   box-shadow: 0 0 6px 6px white inset;
+}
+
+.cuda_link {
+  background-image: url("../assets/image/project-screen.jpg");
+}
+
+.louvre_link {
+  background-image: url("../assets/image/louvre_screen.jpg");
 }
 
 /* contacts div */
