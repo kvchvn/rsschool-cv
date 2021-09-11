@@ -1,6 +1,6 @@
 # Anton Kachan
 
-![My_photo](/my-photo.jpg)
+![My_photo](/my_photo.jpg)
 
 ### Contacts
 
