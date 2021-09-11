@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/adaptive-style.css">
+  <link rel="stylesheet" href="styles/prettify.css">
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Open+Sans&family=Teko:wght@600&display=swap" rel="stylesheet">
+  <title>Anton Kachan</title>
+</head>
+<body>
+
+    <header class="header">
+    
+      <div class="container header-container">
+        <nav class="nav">
+          <h1 class="title main-title">Hello!</h1>
+          <ul class="list nav_list">
+            <li class="item nav-item"><a href="#about_me" class="nav_link">About me</a></li>
+            <li class="item nav-item"><a href="#education" class="nav_link">Education</a></li>
+            <li class="item nav-item"><a href="#skills" class="nav_link">Skills</a></li>
+            <li class="item nav-item"><a href="#code_example" class="nav_link">Code example</a></li>
+            <li class="item nav-item"><a href="#projects" class="nav_link">Projects</a></li>
+            <li class="item nav-item"><a href="#contacts" class="nav_link">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    </header>
+
+    <section class="sub-header">
+      <h2 class="title sub-title">Curriculum vitae of Anton Kachan, web developer</h2>
+    </section>   
+
+    <main class="main">
+
+      <div class="container three-column">
+
+        <section class="column first-column">
+
+          <img class="personal-photo content-block" src="assets/image/personal-photo.jpg" alt="Personal Photo">
+          
+          <div id="about_me" class="about_me content-block">
+            <h3>About me</h3>
+            <p>I live in Belarus. My current job is in the energy sector. 
+              But my striving for development and self-improvement haunted me and ... 
+              I went to study at the RS School. 
+              Looking ahead, I will say that this was one of the most important decisions in my life. 
+              Knock on wood :)<br>
+              The game starts... </p>
+            </div>
+
+        </section>
+
+        <section class="column second-column">
+
+          <div id="skills" class="skills content-block">
+            <h3>Soft skills</h3>
+            <ul class="list soft-skills_list">
+              <li class="item soft-skills_item">reliable</li>
+              <li class="item soft-skills_item">responsible</li>
+              <li class="item soft-skills_item">hard-working</li>
+              <li class="item soft-skills_item">optimistic</li>
+              <li class="item soft-skills_item">determined</li>
+            </ul>
+          </div>
+          
+          <div class=" skills content-block">
+            <h3>Hard skills</h3>
+            <ul class="list">
+              <li class="item hard-skills_item html_item"><span class="progress-bar">HTML5</span></li>
+              <li class="item hard-skills_item css_item"><span class="progress-bar">CSS3</span></li>
+              <li class="item hard-skills_item js_item"><span class="progress-bar">JavaScript</span></li>
+              <li class="item hard-skills_item git_item"><span class="progress-bar">Git</span></li>
+              <li class="item hard-skills_item figma_item"><span class="progress-bar">Figma</span></li>
+            </ul>
+          </div>
+
+          <div id="education" class="education content-block">
+            <h3>Education</h3>
+            <h4>Higher education</h4>
+            <a href="https://bntu.by/" target="_blank"><p>Belarussian National Technical University</p></a>
+            <p>Nuclear Power Plants</p>
+            <p>2014 - 2019</p>
+            <h4>Courses</h4>
+            <a href="https://htmlacademy.ru/" target="_blank"><p class="html-academy_link">HTML Academy</p></a>
+            <a href="https://www.udemy.com/" target="_blank"><p class="udemy_link">Udemy</p></a>
+            <a href="https://rs.school/" target="_blank"><p class="rs-school_link">RS School</p></a>
+          </div>
+
+          <div class="languages content-block">
+            <h3>Languages</h3>
+            <ul class="list">
+              <li class="item russian-lang_item">Russian</li>
+              <li class="item english-lang_item">English</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="column third-column">
+
+        <div id="code_example" class="code-example content-block">
+          <h3>Code example</h3>
+          <pre><code data-language="javascript">function decToBin(d) {
+let result = '';
+let a;
+  if (d === 0 || d === 1) {
+    result = `${d}`;
+  }
+  while (d > 1) {
+    a = d % 2;
+    result = `${a}${result}`;
+    d = Math.floor(d / 2);
+    if (d === 1) {
+      result = `${d}${result}`;
+      break;
+    }
+  }
+return result;
+}</code></pre>
+        </div>
+
+        <div id="projects" class="projects content-block">
+          <h3>Projects</h3>
+          <a class="projects_link" href="https://urozhai.github.io/Cuda/" target="_blank"></a>
+          <p>Will be updated</p>
+        </div>
+
+        <div id="contacts" class="contacts content-block">
+          <h3>Contacts</h3>
+          <ul class="list">
+            <li class="item contacts_phone"><a href="tel:+375333596649">+375333596649</a></li>
+            <li class="item contacts_mail"><a href="mailto:aa.kvchvn@gmail.com">aa.kvchvn@gmail.com</a></li>
+            <li class="item contacts_vk"><a href="https://vk.com/aakachan" target="_blank">@aakachan</a></li>
+            <li class="item contacts_telegram"><a href="https://t.me/aakachan" target="_blank">@aakachan</a></li>
+          </ul>
+        </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+
+      <div class="container footer-container">
+        <a class="rs_link" href="https://rs.school/js/" target="_blank"></a>
+        <p class="year">2021</p>
+        <a class="github_link" href="https://github.com/urozhai" target="_blank"></a>
+      </div>
+
+    </footer>
+
+  <script> </script>
+  <script src="rainbow-custom.min.js"></script>
+</body>
+</html>
