@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
+:root {
+  --bg-light-gray: rgba(128, 128, 128, 0.05);
+  --bg-dark-gray: rgba(128, 128, 128, 0.2);
+  --border-gray: rgb(74, 74, 74);
+  --font-orange: rgb(227, 117, 57);
+  --font-regular: 18px;
+  --font-regular2: 16px;
+}
+
 /* document's properties */
 
 html {
@@ -15,8 +24,15 @@ body {
 /* common properties */
 
 .container {
+  padding: 0 10px;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
 }
 
 h3 {
@@ -49,7 +65,7 @@ a {
 }
 
 a:hover {
-  color: rgb(227, 117, 57);
+  color: var(--font-orange);
 }
 
 .list {
@@ -84,7 +100,7 @@ a:hover {
 .first-column {
   justify-content: flex-start;
   padding-right: 40px;
-  border-right: 4px solid rgb(74, 74, 74);
+  border-right: 4px solid var(--border-gray);
 }
 
 .second-column {
@@ -94,7 +110,7 @@ a:hover {
 
 .third-column {
   padding-left: 40px;
-  border-left: 4px solid rgb(74, 74, 74);
+  border-left: 4px solid var(--border-gray);
 }
 
 .content-block {
@@ -113,7 +129,7 @@ a:hover {
 /* header */
 
 .header {
-  background-color: rgba(128, 128, 128, 0.05);
+  background-color: var(--bg-light-gray);
 }
 
 .title {
@@ -124,11 +140,17 @@ a:hover {
 
 .main-title {
   font-size: 90px;
-  color: rgb(227, 117, 57);
+  color: var(--font-orange);
+}
+
+@media screen and (max-width: 1200px) {
+  .main-title {
+    font-size: 75px;
+  }
 }
 
 .sub-header {
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: var(--bg-dark-gray);
 }
 
 .sub-title {
@@ -136,6 +158,12 @@ a:hover {
   padding: 10px 0;
   text-align: center;
   font-size: 28px;
+}
+
+@media screen and (max-width: 1200px) {
+  .sub-title {
+    font-size: 20px;
+  }
 }
 
 /* navigation */
@@ -157,13 +185,19 @@ a:hover {
   font-size: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  .nav_link {
+    font-size: 16px;
+  }
+}
+
 /* main */
 
 /* education div */
 
 .education p {
   padding-left: 5px;
-  border-left: 3px solid rgb(74, 74, 74);
+  border-left: 3px solid gray;
 }
 
 .education h4:nth-of-type(2) {
@@ -181,7 +215,7 @@ a:hover {
 
 .soft-skills_item:hover {
   padding-left: 20px;
-  background-color: rgba(128, 128, 128, 0.1);
+  background-color: var(--bg-dark-gray);
   cursor: default;
 }
 
@@ -349,6 +383,7 @@ a:hover {
   max-width: 100%;
   height: 200px;
   background-size: cover;
+  background-position: center center;
   box-shadow: 0 0 12px 12px white inset;
   filter: blur(6px);
   transition: filter 1s, box-shadow 1s;
@@ -410,7 +445,7 @@ a:hover {
   margin-top: 100px;
   max-height: 100px;
   padding: 20px 0;
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: var(--bg-dark-gray);
 }
 
 .footer-container {
