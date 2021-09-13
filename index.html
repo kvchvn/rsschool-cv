@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/adaptive-style.css">
   <link rel="stylesheet" href="styles/prettify.css">
+  <link rel="stylesheet" href="styles/hamburger-menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Allison&family=Open+Sans&family=Teko:wght@600&display=swap" rel="stylesheet">
   <title>Anton Kachan</title>
 </head>
@@ -17,13 +18,17 @@
       <div class="container header-container">
         <nav class="nav">
           <h1 class="title main-title">Hello!</h1>
+          <input id="menu_switch" class="menu_switch" type="checkbox" />
+          <label class="menu_button" for="menu_switch">
+            <span class="hamburger-icon"></span>
+          </label>
           <ul class="list nav_list">
-            <li class="item nav-item"><a href="#about_me" class="nav_link">About me</a></li>
-            <li class="item nav-item"><a href="#education" class="nav_link">Education</a></li>
-            <li class="item nav-item"><a href="#skills" class="nav_link">Skills</a></li>
-            <li class="item nav-item"><a href="#code_example" class="nav_link">Code example</a></li>
-            <li class="item nav-item"><a href="#projects" class="nav_link">Projects</a></li>
-            <li class="item nav-item"><a href="#contacts" class="nav_link">Contacts</a></li>
+            <li class="item nav_item"><a href="#about_me" class="nav_link">About me</a></li>
+            <li class="item nav_item"><a href="#education" class="nav_link">Education</a></li>
+            <li class="item nav_item"><a href="#skills" class="nav_link">Skills</a></li>
+            <li class="item nav_item"><a href="#code_example" class="nav_link">Code example</a></li>
+            <li class="item nav_item"><a href="#projects" class="nav_link">Projects</a></li>
+            <li class="item nav_item"><a href="#contacts" class="nav_link">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -137,7 +142,7 @@ return result;
           <h3>Projects</h3>
           <a class="projects_link cuda_link" href="https://urozhai.github.io/Cuda/" target="_blank"></a>
           <a class="projects_link louvre_link" href="https://rolling-scopes-school.github.io/urozhai-JSFEPRESCHOOL/museum/" target="_blank"></a>
-          <p>Will be updated</p>
+          <p>Will be updated ...</p>
         </div>
 
         </section>
@@ -157,6 +162,7 @@ return result;
     </footer>
 
   <script> </script>
+  <script src="script.js"></script>
   <script src="rainbow-custom.min.js"></script>
 </body>
 </html>
