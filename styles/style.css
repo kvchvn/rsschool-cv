@@ -49,12 +49,17 @@ body {
 }
 
 h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
   margin: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 3px;
+  background-color: rgba(3, 117, 133, 0.3);
+  border-radius: 5px;
 }
 
 h4 {
@@ -149,31 +154,32 @@ a:hover {
 }
 
 .first-column {
+  padding: 20px;
   justify-content: flex-start;
-  padding-right: 40px;
-  border-right: 4px solid var(--border-gray);
+  border-radius: 10px;
+  background-color: var(--bg-dark-gray);
 }
 
 .second-column {
   padding-left: 40px;
   padding-right: 40px;
+  border-right: 4px solid var(--border-gray);
 }
 
 .third-column {
   padding-left: 40px;
-  border-left: 4px solid var(--border-gray);
 }
 
 @media screen and (max-width: 1201px) {
   .first-column {
-    padding-right: 20px;
+    padding-right: 30px;
   }
   .second-column {
-    padding-left: 20px;
+    padding-left: 40px;
     padding-right: 20px;
   }
   .third-column {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 
@@ -182,8 +188,9 @@ a:hover {
     padding-right: 10px;
   }
   .second-column {
-    padding-left: 10px;
+    padding-left: 30px;
     padding-right: 10px;
+    border-right: 0;
   }
   .third-column {
     padding-left: 10px;
@@ -222,7 +229,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .column {
     flex-direction: column;
     justify-content: flex-start;
@@ -230,7 +237,7 @@ a:hover {
   .first-column {
     padding: 0;
     width: 100%;
-    border-right: none;
+    background-color: inherit;
   }
   .second-column {
     padding: 0;
@@ -241,12 +248,15 @@ a:hover {
     flex-direction: column;
     padding: 0;
     width: 100%;
-    border-left: none;
   }
 }
 
 .content-block {
   margin-bottom: 50px;
+}
+
+.content-block:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 801px) {
@@ -255,22 +265,13 @@ a:hover {
   }
 }
 
-.content-block:last-child {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .content-block {
     margin-bottom: 40px;
   }
   .content-block:last-child {
     margin-bottom: 40px;
   }
-}
-
-.personal-photo {
-  display: block;
-  max-width: 100%;
 }
 
 /* header */
@@ -345,7 +346,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .sub-title {
     font-size: 16px;
   }
@@ -402,13 +403,19 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .nav_link {
     font-size: 18px;
   }
 }
 
 /* main */
+
+.personal-photo {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+}
 
 /* about me div */
 
@@ -453,17 +460,6 @@ a:hover {
   background-image: url("../assets/icons/telegram.svg");
 }
 
-/* education div */
-
-.education p {
-  padding-left: 5px;
-  border-left: 3px solid gray;
-}
-
-.education h4:nth-of-type(2) {
-  margin-top: 20px;
-}
-
 /* skills div */
 
 /* soft skills */
@@ -480,6 +476,12 @@ a:hover {
 }
 
 /* hard skills */
+
+.hint {
+  display: block;
+  font-size: 14px;
+  color: var(--font-orange);
+}
 
 .hard-skills_item {
   padding: 0;
@@ -566,6 +568,17 @@ a:hover {
   opacity: 0;
   margin: auto 0;
   margin-right: 5px;
+}
+
+/* education div */
+
+.education p {
+  padding-left: 5px;
+  border-left: 3px solid gray;
+}
+
+.education h4:nth-of-type(2) {
+  margin-top: 20px;
 }
 
 /* languages div */
@@ -671,7 +684,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .code-example {
     padding: 0;
     width: 100%;
@@ -708,7 +721,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .projects {
     margin-top: 40px;
     padding: 0;
@@ -716,16 +729,76 @@ a:hover {
   }
 }
 
-.projects_link {
+.project_link {
+  padding: 0 10px;
+  position: relative;
   display: block;
   margin-bottom: 10px;
   max-width: 100%;
   height: 200px;
+}
+
+.background-blur {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   box-shadow: 0 0 12px 12px white inset;
   filter: blur(6px);
   transition: filter 1s, box-shadow 1s;
+  z-index: 1;
+}
+
+.project_description {
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+  display: block;
+  width: 100%;
+  height: 50%;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 12px 12px rgba(255, 255, 255, 0.7);
+  transition: opacity 1s;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1025px) {
+  .project_description {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .project_description {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .project_description p {
+    font-size: 13px;
+  }
+}
+
+.project_description p {
+  margin-bottom: 10px;
+  line-height: 15px;
+}
+
+.project_description span {
+  padding: 0 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(17, 85, 185);
+  border: 2px solid rgb(17, 85, 185);
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 801px) {
@@ -734,22 +807,26 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .projects_link {
     height: 200px;
   }
 }
 
-.projects_link:hover {
+.project_link:hover .background-blur {
   filter: blur(0);
   box-shadow: 0 0 6px 6px white inset;
 }
 
-.cuda_link {
+.project_link:hover .project_description {
+  opacity: 0;
+}
+
+.background_cuda {
   background-image: url("../assets/image/cuda_screen.jpg");
 }
 
-.louvre_link {
+.background_museum {
   background-image: url("../assets/image/louvre_screen.jpg");
 }
 
@@ -780,7 +857,7 @@ a:hover {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 601px) {
   .footer-container {
     max-width: none;
   }

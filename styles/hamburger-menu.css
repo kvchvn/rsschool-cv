@@ -34,7 +34,6 @@
 
   #menu_switch:checked ~ .menu_button > .hamburger-icon {
     transform: rotate(45deg);
-    transition-duration: 0.25s;
   }
 
   #menu_switch:checked ~ .menu_button > .hamburger-icon::before {
@@ -45,6 +44,10 @@
   #menu_switch:checked ~ .menu_button > .hamburger-icon::after {
     top: 0;
     transform: rotate(90deg);
+  }
+
+  .menu_button > .hamburger-icon,
+  .menu_button > .hamburger-icon::after {
     transition-duration: 0.25s;
   }
 
