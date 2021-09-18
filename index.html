@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/adaptive-style.css">
   <link rel="stylesheet" href="styles/prettify.css">
   <link rel="stylesheet" href="styles/hamburger-menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Allison&family=Open+Sans&family=Teko:wght@600&display=swap" rel="stylesheet">
   <title>Anton Kachan</title>
 </head>
 <body>
+  
 
     <header class="header">
     
@@ -23,12 +23,12 @@
             <span class="hamburger-icon"></span>
           </label>
           <ul class="list nav_list">
-            <li class="item nav_item"><a href="#about_me" class="nav_link">About me</a></li>
-            <li class="item nav_item"><a href="#education" class="nav_link">Education</a></li>
-            <li class="item nav_item"><a href="#skills" class="nav_link">Skills</a></li>
-            <li class="item nav_item"><a href="#code_example" class="nav_link">Code example</a></li>
-            <li class="item nav_item"><a href="#projects" class="nav_link">Projects</a></li>
-            <li class="item nav_item"><a href="#contacts" class="nav_link">Contacts</a></li>
+            <li class="item nav_item"><a id="about_me_link" href="#about_me" class="nav_link">About me</a></li>
+            <li class="item nav_item"><a id="education_link" href="#education" class="nav_link">Education</a></li>
+            <li class="item nav_item"><a id="skills_link" href="#skills_soft" class="nav_link">Skills</a></li>
+            <li class="item nav_item"><a id="code_example_link" href="#code_example" class="nav_link">Code example</a></li>
+            <li class="item nav_item"><a id="projects_link" href="#projects" class="nav_link">Projects</a></li>
+            <li class="item nav_item"><a id="contacts_link" href="#contacts" class="nav_link">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -69,103 +69,103 @@
 
         </section>
 
-        <section class="column second-column">
+          <section class="column second-column">
 
-          <div id="skills" class="skills content-block">
-            <h3>Soft skills</h3>
-            <ul class="list soft-skills_list">
-              <li class="item soft-skills_item">reliable</li>
-              <li class="item soft-skills_item">responsible</li>
-              <li class="item soft-skills_item">hard-working</li>
-              <li class="item soft-skills_item">optimistic</li>
-              <li class="item soft-skills_item">determined</li>
-            </ul>
-          </div>
-          
-          <div class="skills content-block">
-            <h3>Hard skills</h3>
-            <span class="hint">* hover to get more</span>
-            <ul class="list">
-              <li class="item hard-skills_item html_item"><span class="progress-bar">HTML5</span></li>
-              <li class="item hard-skills_item css_item"><span class="progress-bar">CSS3</span></li>
-              <li class="item hard-skills_item js_item"><span class="progress-bar">JavaScript</span></li>
-              <li class="item hard-skills_item git_item"><span class="progress-bar">Git</span></li>
-              <li class="item hard-skills_item figma_item"><span class="progress-bar">Figma</span></li>
-            </ul>
-          </div>
-
-          <div id="education" class="education content-block">
-            <h3>Education</h3>
-            <h4>Higher education</h4>
-            <a href="https://bntu.by/" target="_blank"><p>Belarussian National Technical University</p></a>
-            <p>Nuclear Power Plants</p>
-            <p>2014 - 2019</p>
-            <h4>Courses</h4>
-            <a href="https://htmlacademy.ru/" target="_blank"><p class="html-academy_link">HTML Academy</p></a>
-            <a href="https://www.udemy.com/" target="_blank"><p class="udemy_link">Udemy</p></a>
-            <a href="https://rs.school/" target="_blank"><p class="rs-school_link">RS School</p></a>
-          </div>
-
-          <div class="languages content-block">
-            <h3>Languages</h3>
-            <span class="hint">* hover to get more</span>
-            <ul class="list">
-              <li class="item russian-lang_item">Russian</li>
-              <li class="item english-lang_item">English</li>
-            </ul>
-          </div>
-
-        </section>
-
-        <section class="column third-column">
-
-        <div id="code_example" class="code-example content-block">
-          <h3>Code example</h3>
-          <pre><code data-language="javascript">function decToBin(d) {
-let result = '';
-let a;
- if (d === 0 || d === 1) {
-   result = `${d}`;
- }
- while (d > 1) {
-   a = d % 2;
-   result = `${a}${result}`;
-   d = Math.floor(d / 2);
-   if (d === 1) {
-     result = `${d}${result}`;
-     break;
+            <div id="skills_soft" class="skills content-block">
+              <h3>Soft skills</h3>
+              <ul class="list soft-skills_list">
+                <li class="item soft-skills_item">reliable</li>
+                <li class="item soft-skills_item">responsible</li>
+                <li class="item soft-skills_item">hard-working</li>
+                <li class="item soft-skills_item">optimistic</li>
+                <li class="item soft-skills_item">determined</li>
+              </ul>
+            </div>
+            
+            <div id="skills_hard" class="skills content-block">
+              <h3>Hard skills</h3>
+              <span class="hint">* hover to get more</span>
+              <ul class="list">
+                <li class="item hard-skills_item html_item"><span class="progress-bar">HTML5</span></li>
+                <li class="item hard-skills_item css_item"><span class="progress-bar">CSS3</span></li>
+                <li class="item hard-skills_item js_item"><span class="progress-bar">JavaScript</span></li>
+                <li class="item hard-skills_item git_item"><span class="progress-bar">Git</span></li>
+                <li class="item hard-skills_item figma_item"><span class="progress-bar">Figma</span></li>
+              </ul>
+            </div>
+  
+            <div id="education" class="education content-block">
+              <h3>Education</h3>
+              <h4>Higher education</h4>
+              <a href="https://bntu.by/" target="_blank"><p>Belarussian National Technical University</p></a>
+              <p>Nuclear Power Plants</p>
+              <p>2014 - 2019</p>
+              <h4>Courses</h4>
+              <a href="https://htmlacademy.ru/" target="_blank"><p class="html-academy_link">HTML Academy</p></a>
+              <a href="https://www.udemy.com/" target="_blank"><p class="udemy_link">Udemy</p></a>
+              <a href="https://rs.school/" target="_blank"><p class="rs-school_link">RS School</p></a>
+            </div>
+  
+            <div class="languages content-block">
+              <h3>Languages</h3>
+              <span class="hint">* hover to get more</span>
+              <ul class="list">
+                <li class="item russian-lang_item">Russian</li>
+                <li class="item english-lang_item">English</li>
+              </ul>
+            </div>
+  
+          </section>
+  
+          <section class="column third-column">
+  
+          <div id="code_example" class="code-example content-block">
+            <h3>Code example</h3>
+            <pre><code data-language="javascript">function decToBin(d) {
+  let result = '';
+  let a;
+   if (d === 0 || d === 1) {
+     result = `${d}`;
    }
- }
-return result;
-}</code></pre>
-        </div>
-
-        <div id="projects" class="projects content-block">
-          <h3>Projects</h3>
-          <a class="project_link cuda_link" href="https://urozhai.github.io/Cuda/" target="_blank">
-            <span class="background-blur background_cuda"></span>
-            <div class="project_description">
-              <h4>Cuda</h4>
-              <p>Trial website</p>
-              <p>Completed in a self-learning process</p>
-              <span class="html_icon">html</span>
-              <span class="css_icon">css</span>
-            </div>
-          </a>
-          <a class="project_link museum_link" href="https://rolling-scopes-school.github.io/urozhai-JSFEPRESCHOOL/museum/" target="_blank">
-            <span class="background-blur background_museum"></span>
-            <div class="project_description">
-              <h4>Museum</h4>
-              <p>Landing page of the Louvre Museum</p>
-              <p>Completed as a task at RS School</p>
-              <span class="html_icon">html</span>
-              <span class="css_icon">css</span>
-            </div>
-          </a>
-          <p>Will be updated ...</p>
-        </div>
-
-        </section>
+   while (d > 1) {
+     a = d % 2;
+     result = `${a}${result}`;
+     d = Math.floor(d / 2);
+     if (d === 1) {
+       result = `${d}${result}`;
+       break;
+     }
+   }
+  return result;
+  }</code></pre>
+          </div>
+  
+          <div id="projects" class="projects content-block">
+            <h3>Projects</h3>
+            <a class="project_link cuda_link" href="https://urozhai.github.io/Cuda/" target="_blank">
+              <span class="background-blur background_cuda"></span>
+              <div class="project_description">
+                <h4>Cuda</h4>
+                <p>Trial website</p>
+                <p>Completed in a self-learning process</p>
+                <span class="html_icon">html</span>
+                <span class="css_icon">css</span>
+              </div>
+            </a>
+            <a class="project_link museum_link" href="https://rolling-scopes-school.github.io/urozhai-JSFEPRESCHOOL/museum/" target="_blank">
+              <span class="background-blur background_museum"></span>
+              <div class="project_description">
+                <h4>Museum</h4>
+                <p>Landing page of the Louvre</p>
+                <p>Completed as a task at RS School</p>
+                <span class="html_icon">html</span>
+                <span class="css_icon">css</span>
+              </div>
+            </a>
+            <p>Will be updated ...</p>
+          </div>
+  
+          </section>
 
       </div>
 
@@ -181,7 +181,6 @@ return result;
 
     </footer>
 
-  <script> </script>
   <script src="script.js"></script>
   <script src="rainbow-custom.min.js"></script>
 </body>
